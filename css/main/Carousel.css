@@ -1,0 +1,107 @@
+.Carousel
+{
+    position: relative;
+    height: 50vh;
+    color: var(--Forground_3);
+    background-color:var(--Background_3);
+}
+
+.Carousel *
+{
+    position: absolute;
+    font-size: 2vh;
+}
+.Carousel:hover .Car_Child_info
+{
+    opacity: 1;
+    background-image: linear-gradient(to right,var(--Background_4),#fff0) ;
+}
+.Car_Child
+{
+    width:100%;
+    height: 100%;
+    border: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color:var(--Forground_4);
+    background-image: url(https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-ada-4090-web-og-1200x630.jpg);
+    background-clip:border-box ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.Car_Child_info
+{
+    width: 100%;
+    bottom: 5vh;
+    /* position: relative; */
+    opacity: .5;
+    transition:opacity 500ms;
+}
+.Car_Child:hover .Car_Child_info,.Car_Child_info:hover
+{
+    opacity: 1;
+    background-image: linear-gradient(to right,var(--Background_4),#fff0) ;
+}
+
+.Car_Left,.Car_Right
+{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 5vh;
+    color:var(--Forground_5);
+}
+.Car_Left i,.Car_Right i,.Car_dots i
+{
+    position: relative;
+    /* scale: 2; */
+}
+.Car_Right
+{
+    right: 0px;
+}
+.Car_dots i
+{
+    
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+}
+.Car_dotsP
+{
+    height:5vh;
+    width: 100%;
+    bottom: 0px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--Background_3);
+    /* opacity: .5; */
+}
+.Car_dots
+{
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: stretch;
+    align-items: stretch;
+}
+.fa-ring
+{
+    color:var(--Forground_5);
+    scale: 1.5;
+}
+.fa-circle
+{
+    color:var(--Forground_3);
+}
+
+.NewReleases,.CommunityBuilds,.RecentlyViewed,.AboutUs
+{
+    background-color: var(--Background_5);
+    height: 200px;
+}

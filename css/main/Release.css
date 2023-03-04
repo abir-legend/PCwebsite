@@ -1,0 +1,80 @@
+.NewReleases
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: var(--Background_5);
+    width: 100%;
+    height:30vh;
+}
+@media screen and (max-width: 500px)
+{
+    .NewReleases
+    {
+        grid-template-columns: repeat(2,1fr);
+        height:40vh;
+    }
+}
+.News
+{
+    background-color: var(--Background_5);
+    position: relative;
+    height:100%
+
+}
+.News .h1
+{
+    position: absolute;
+    bottom: 20%;
+    left:2.5%
+}
+.News .article
+{
+    position: absolute;
+    bottom: 10%;
+    left:2.5%
+}
+.Launch
+{
+    position: relative;
+    height:100%    
+}
+.Launch .h1
+{
+    position: absolute;
+    bottom: 20%;
+    left:2.5%
+}
+.Launch .article
+{
+    position: absolute;
+    bottom: 10%;
+    left:2.5%
+}
+.h1
+{
+    width:100%;
+    height:1em;
+    white-space: nowrap;
+}
+.h1,.article
+{
+    color: var(--Forground_1);   
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article
+{
+    font-size: .4em;
+}
+.image
+{
+    height: 100%;
+    width: 100%;
+}
+.darkbg
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(var(--rot),var(--c1) var(--pos1),var(--c2) var(--pos2));
+}

@@ -1,0 +1,29 @@
+.CommunityBuilds
+{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    color: var(--Forground_1);
+    background-image: linear-gradient(270deg,var(--Background_4),var(--Background_1));
+}
+.post
+{
+    border: .1px solid var(--Background_1);
+    display: grid;
+    grid-template-columns: 6vw 1fr;
+}
+.icon
+{
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    font-size: 4vw;
+}
+.content
+{
+    font-size: 1em;
+    padding-left: 2%;
+    align-content: center;
+    display: grid;
+}

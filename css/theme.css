@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+:root
+{
+    --hue:10;
+    --hue2:calc(var(--hue) + 2);
+    --sat:60%;
+    --sat2:50%;   
+    --Background_1 : hsl(var(--hue), var(--sat), 12%);
+    --Background_2 : hsl(var(--hue), var(--sat), 18%);
+    --Background_3 : hsl(var(--hue), var(--sat), 24%);
+    --Background_4 : hsl(var(--hue), var(--sat), 30%);
+    --Background_5 : hsl(var(--hue), var(--sat), 36%);
+    --Forground_1: hsl(var(--hue), var(--sat2) , 60%);
+    --Forground_2: hsl(var(--hue), var(--sat2) , 66%);
+    --Forground_3: hsl(var(--hue), var(--sat2), 72%);
+    --Forground_4: hsl(var(--hue), var(--sat2), 78%);
+    --Forground_5: hsl(var(--hue), var(--sat2), 84%);
+}
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        /* --Background_1 : hsl(var(--hue), var(--sat), 10%);
+        --Background_2 : hsl(var(--hue), var(--sat), 18%);
+        --Background_3 : hsl(var(--hue), var(--sat), 26%);
+        --Background_4 : hsl(var(--hue), var(--sat), 34%);
+        --Background_5 : hsl(var(--hue), var(--sat), 42%);
+        --Forground_1: hsl(var(--hue), var(--sat) , 90%);
+        --Forground_2: hsl(var(--hue), var(--sat) , 82%);
+        --Forground_3: hsl(var(--hue), var(--sat2), 74%);
+        --Forground_4: hsl(var(--hue), var(--sat2), 82%);
+        --Forground_5: hsl(var(--hue), var(--sat2), 90%); */
+    }
+}
+@media (prefers-color-scheme: light)
+{
+    :root
+    {
+        --Background_1: hsl(var(--hue), var(--sat) , 90%);
+        --Background_2: hsl(var(--hue), var(--sat) , 82%);
+        --Background_3: hsl(var(--hue), var(--sat2), 74%);
+        --Background_4: hsl(var(--hue), var(--sat2), 82%);
+        --Background_5: hsl(var(--hue), var(--sat2), 90%);
+        --Forground_1 : hsl(var(--hue), var(--sat), 10%);
+        --Forground_2 : hsl(var(--hue), var(--sat), 18%);
+        --Forground_3 : hsl(var(--hue), var(--sat), 26%);
+        --Forground_4 : hsl(var(--hue), var(--sat), 34%);
+        --Forground_5 : hsl(var(--hue), var(--sat), 42%);
+    }
+}
+body
+{
+    background-color: var(--Background_1);
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--Forground_1);
+}
