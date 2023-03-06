@@ -38,8 +38,13 @@
 }
 .SearchText
 {
-    padding-left: .7vw;
-    padding-top: .1em;
+    padding-left: 2vh;
+    background-color: var(--Background_3);
+    border-radius: 8vw;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--Forground_2);
 }
 .SearchButton
 {
@@ -48,4 +53,32 @@
     justify-content: center;
     padding: .7vh;
     color: var(--Forground_2);
+}
+.suggestionbox
+{
+    border-radius: 8vw;
+    /* display: none; */
+    z-index: 999;
+    height: 4vh;
+    background-color: var(--Background_2);
+}
+.sugesstionjump 
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: .7vh;
+    color: var(--Forground_2);
+    border-radius: 8vw;
+    /* display: none; */
+    background-color: var(--Background_3);
+    color: var(--Forground_2);
+    z-index: 999;
+}
+.sugesstionjump > .fa-solid
+{
+    position: relative;
+    rotate: -45deg;
+    font-size: 1em;
+    z-index: 1000;
 }

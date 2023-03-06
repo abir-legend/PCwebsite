@@ -1,44 +1,79 @@
-l = new Listing('https://m.media-amazon.com/images/I/61wbV8oqAbL._SL1500_.jpg','Rtx 3090','https://www.amazon.in/GeForce-RTX-3090-Founders-Graphics/dp/B08HR6ZBYJ')
-
-const ll = []
-for(i = 0; i < 10; i++)
+class generator
 {
-    ll.push(l);
-}
-
-
-// remove this in  production
-function Carousel()
-{
-    alert('This shouldnt be in production')
-    Par = document.querySelector('.Carousel');
-    Chi = document.querySelector('.Car_Child');
-    for(i in ll)
+    icon(classb,classa ='fa-solid')
     {
-        Par.appendChild(Chi.cloneNode(true));
+        var icon = document.createElement("i");
+        icon.classList.add(classa);
+        icon.classList.add(classb);
+        return icon
+    }
+    div(classa)
+    {
+        var div = document.createElement("div");
+        div.classList.add(classa);
+        return div;
+    }
+    input(classa,type = 'text')
+    {
+        var input = document.createElement("input");
+        input.classList.add(classa);
+        input.type = type
+        return input;
+    }
+};
+class MyMenu extends HTMLElement 
+{
+    constructor() 
+    {
+        var gen = new generator();
+        super();
+        this.classList.add("Menu");
+        var logo = gen.div("Logo");
+        logo.appendChild(gen.icon('fa-microchip'));
+        var search =gen.div("Searchbar");
+        search.appendChild(gen.input('SearchText'))
+        var button = gen.div('SearchButton')
+        search.appendChild(button)
+        search.appendChild(gen.div('suggestionbox'));
+        var jump = search.appendChild(gen.div('sugesstionjump'));
+        jump.appendChild(gen.icon('fa-arrow-up'))
+        button.appendChild(gen.icon('fa-magnifying-glass'));
+        var build = gen.div("build");
+        build.appendChild(gen.icon('fa-bolt'));
+        var user = gen.div("user");
+        user.appendChild(gen.icon('fa-regular','fa-user'));
+
+        this.appendChild(logo);
+        this.appendChild(search);
+        this.appendChild(build);
+        this.appendChild(user);
+    }
+};
+  
+function unfocus()
+{
+    suggestionBox.style.display = 'none';
+    suggestionJump.style.display = 'none';
+}
+function focus()
+{
+    console.log('focus');
+    if (searchText.value) {
+        console.log(searchText.value);
+        suggestionBox.style.display = 'block';
+        suggestionJump.style.display = 'block';
+    }
+    else
+    { 
+        unfocus()
     }
 }
-const timer = ms => new Promise(res => setTimeout(res, ms))
 
-
-async function myAsyncFunction() {
-    let a = 0
-    while(true)
-    {
-        await timer(100);
-        if (a == 359)
-        {
-            a = 0
-        }
-        else{
-            a = a+1
-        }
-        console.log(a)
-        document.documentElement.style.setProperty('--hue', a);
-    }
-}
-
-// myAsyncFunction();
-
-
-// Carousel()
+customElements.define('menu-bar', MyMenu);
+const searchBar = document.querySelector('.Searchbar');
+const searchText = document.querySelector('.SearchText');
+const suggestionBox = document.querySelector('.suggestionbox');
+const suggestionJump = document.querySelector('.sugesstionjump');
+searchText.addEventListener('focus',() => focus());
+searchText.addEventListener('input',() => focus());
+searchText.addEventListener('blur', () => unfocus());
