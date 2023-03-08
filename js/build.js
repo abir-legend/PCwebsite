@@ -77,3 +77,10 @@ const suggestionJump = document.querySelector('.sugesstionjump');
 searchText.addEventListener('focus',() => focus());
 searchText.addEventListener('input',() => focus());
 searchText.addEventListener('blur', () => unfocus());
+
+document.addEventListener("keyup", (e) => {
+    console.log(e);
+    if(e.key == '/')
+        searchText.focus();
+        
+});
