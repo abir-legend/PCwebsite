@@ -1,4 +1,4 @@
-export class generator
+class generator
 {
     icon(classb,classa ='fa-solid')
     {
