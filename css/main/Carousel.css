@@ -1,5 +1,6 @@
 .Carousel
 {
+    display:grid;
     position: relative;
     height: 50vh;
     color: var(--Forground_3);
@@ -71,7 +72,7 @@
     justify-items: center;
     
 }
-.Car_dotsP
+.Car_dotsP,.Pointers
 {
     height:5vh;
     width: 100%;

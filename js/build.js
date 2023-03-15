@@ -49,6 +49,38 @@ class MyMenu extends HTMLElement
         this.appendChild(user);
     }
 };
+
+class carousel extends HTMLElement 
+{
+    children = []
+    pointers = null;
+    constructor() 
+    {
+        var gen = new generator();
+        super();
+        this.classList.add("Carousel");
+
+        if(this.pointers == null)
+        {
+            controls = gen.div("pointers");
+        }
+        var controls = gen.div("controls");
+        controls.appendChild(gen.div("left"));
+        controls.appendChild(gen.div("right"));
+        controls.appendChild(pointers);
+
+
+
+        this.appendChild(logo);
+        this.appendChild(search);
+        this.appendChild(build);
+        this.appendChild(user);
+    }
+    setChild(count)
+    {
+        
+    }
+}
   
 function unfocus()
 {
@@ -70,6 +102,7 @@ function focus()
 }
 
 customElements.define('menu-bar', MyMenu);
+customElements.define('carousel-bar', carousel);
 const searchBar = document.querySelector('.Searchbar');
 const searchText = document.querySelector('.SearchText');
 const suggestionBox = document.querySelector('.suggestionbox');
