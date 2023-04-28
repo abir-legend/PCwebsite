@@ -1,0 +1,19 @@
+.RecentlyViewed
+{
+    background-color: var(--Background_5);
+    height: 200px;
+}
+
+/* debug */
+body *
+{
+    /* background-color: var(--Background_5); */
+    /* color: var(--Forground_5); */
+    /* outline: 1px solid #f00 !important; */
+}
+.AboutUs
+{
+    height: 20vh;
+    bottom: 0;
+    width: 100%;
+}

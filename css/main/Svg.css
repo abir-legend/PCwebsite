@@ -1,0 +1,17 @@
+svg
+{
+    scale: .5;
+}
+
+svg *
+{
+    fill: none; 
+    stroke-width: 5px;
+    stroke: var(--Forground_1)
+}
+.fan
+{
+    fill: none; 
+    stroke-width: 2px;
+    stroke: var(--Forground_1)
+}

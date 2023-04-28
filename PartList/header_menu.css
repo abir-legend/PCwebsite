@@ -1,0 +1,110 @@
+.menu
+{
+    position: sticky;
+    top:0;
+    z-index: 999; 
+    align-items: center;
+    height: 5vh;
+    background-color:var(--Background_1);
+    color: var(--Forground_1);
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+}
+.logo,.build,.user
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+}
+.logo:hover,.build:hover,.user:hover
+{
+    background-color: var(--Background_5);
+    border-radius: 100vh;
+    transition: background-color ease-in-out 500ms;
+    cursor: pointer;
+}
+
+.user-auth-btn{
+    text-decoration: none;
+}
+
+.user-auth-btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.searchbar
+{
+    display: grid;
+    height: 4vh;
+    grid-template-columns: auto 5vh;
+    background-color:var(--Background_2);
+    color: var(--Forground_2);
+    border-radius: 8vw;
+    cursor: pointer;
+
+}
+
+.SearchInput {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  padding-left: .7vw;
+  color: var(--Forground_2);
+}
+
+.SearchInput:focus {
+  outline: none;
+}
+
+.SearchInput::placeholder {
+  color: var(--Forground_2);
+  opacity: 0.6;
+}
+
+.SearchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7vh .7vw;
+  color: var(--Forground_2);
+}
+
+/* .SearchText
+{
+    padding-left: .7vw;
+    padding-top: .1em;
+} */
+/* .SearchButton
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: .7vh;
+    color: var(--Forground_2);
+} */
+
+  /* Menu Nav */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }

@@ -1,0 +1,43 @@
+.Topics
+{
+    padding: 1vw;
+    display: grid;
+    gap: 1vw;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(16,1fr);
+    height: 10vh;
+    /* overflow-x: scroll; */
+}
+
+@media screen and (max-width: 1440px)
+{
+    .Topics
+    {
+        height: 20vh;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(8,1fr);
+    }
+}
+
+.Topics *
+{
+    aspect-ratio: 1;
+    height: min(10vw,8vh);
+    border-radius: 20vw;
+    background-color: var(--Forground_1);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--Background_2);
+
+}
+.Topics * i
+{
+    position:relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    scale: 1vw;
+    color: var(--Forground_1);
+}

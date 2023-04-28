@@ -1,0 +1,84 @@
+.menu
+{
+    /* position: sticky; */
+    top:0;
+    z-index: 999;
+    align-items: center;
+    height: 5vh;
+    background-color:var(--Background_1);
+    color: var(--Forground_1);
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+}
+.logo,.build,.user
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+}
+.logo:hover,.build:hover,.user:hover
+{
+    background-color: var(--Background_5);
+    border-radius: 100vh;
+    transition: background-color ease-in-out 500ms;
+}
+
+.Searchbar
+{
+    display: grid;
+    height: 4vh;
+    grid-template-columns: auto 5vh;
+    background-color:var(--Background_2);
+    color: var(--Forground_2);
+    border-radius: 8vw;
+    
+}
+.SearchText
+{
+    padding-left: 2vh;
+    background-color: var(--Background_3);
+    border-radius: 8vw;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--Forground_2);
+}
+.SearchButton
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: .7vh;
+    color: var(--Forground_2);
+}
+.suggestionbox
+{
+    border-radius: 8vw;
+    /* display: none; */
+    z-index: 999;
+    height: 4vh;
+    background-color: var(--Background_2);
+}
+.sugesstionjump 
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: .7vh;
+    color: var(--Forground_2);
+    border-radius: 8vw;
+    /* display: none; */
+    background-color: var(--Background_3);
+    color: var(--Forground_2);
+    z-index: 999;
+}
+.sugesstionjump > .fa-solid
+{
+    position: relative;
+    rotate: -45deg;
+    font-size: 1em;
+    z-index: 1000;
+}
