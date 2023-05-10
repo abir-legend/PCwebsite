@@ -31,3 +31,17 @@ input.addEventListener("keyup", function() {
     }
   }
 });
+
+function Loader()
+{
+  // load typw of parts with url parameters
+  //get data from fire base
+  //run for loop to generat rows
+}
+
+function RowGenerator(json)
+{
+  //create a row element add addon class to it
+  // fill data
+  //add on click to subham's page
+}
