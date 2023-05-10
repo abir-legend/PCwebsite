@@ -1,8 +1,8 @@
 root
-|- Main.html //landing page
-|- 1.html //your pages
-|- 2.html //your pages
-|- 3.html //your pages
+|- Main.html //abir landing page 
+|- build.html //hritick
+|- details.html //sourav
+|- Compare.html // Subham
 |- /css
 |    |-Theme.css //main theme controller
 |    |-menu.css  //top bar/hedder 

@@ -8,9 +8,9 @@
     background-color:var(--Background_1);
     color: var(--Forground_1);
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
 }
-.logo,.build,.user
+.logo,.build,.user,.theme
 {
     display: grid;
     align-items: center;
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
 }
-.logo:hover,.build:hover,.user:hover
+.logo:hover,.build:hover,.user:hover,.theme:hover
 {
     background-color: var(--Background_5);
     border-radius: 100vh;

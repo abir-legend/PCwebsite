@@ -37,4 +37,4 @@ class Cpu extends Parts
         this.l3 = l3;
     }
     super(name,image,link)
-}
+};

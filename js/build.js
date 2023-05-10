@@ -20,6 +20,18 @@ class generator
         input.type = type
         return input;
     }
+    options(classa,name,list)
+    {
+        var cpuSelect = document.createElement('select');
+        cpuSelect.name = name;
+        for (let option of list) 
+        {
+            const cpuOption = document.createElement('option');
+            cpuOption.textContent = option;
+            cpuSelect.appendChild(cpuOption);
+        }
+        cpuSelect.classList.add(classa);
+    }
 };
 class MyMenu extends HTMLElement 
 {
@@ -30,6 +42,7 @@ class MyMenu extends HTMLElement
         this.classList.add("Menu");
         var logo = gen.div("Logo");
         logo.appendChild(gen.icon('fa-microchip'));
+        logo.addEventListener("click", () => this.Goto('main'));
         var search =gen.div("Searchbar");
         search.appendChild(gen.input('SearchText'))
         var button = gen.div('SearchButton')
@@ -39,14 +52,29 @@ class MyMenu extends HTMLElement
         jump.appendChild(gen.icon('fa-arrow-up'))
         button.appendChild(gen.icon('fa-magnifying-glass'));
         var build = gen.div("build");
+        build.addEventListener("click", () => this.Goto('build'));
         build.appendChild(gen.icon('fa-bolt'));
+        var theme = gen.div("theme");
+        theme.appendChild(gen.icon('fa-palette'));
         var user = gen.div("user");
         user.appendChild(gen.icon('fa-regular','fa-user'));
 
         this.appendChild(logo);
         this.appendChild(search);
         this.appendChild(build);
+        this.appendChild(theme);
         this.appendChild(user);
+    };
+
+    Goto(link) 
+    {
+        console.log(link);
+        const currentPage = window.location.href.replace(window.location.origin, '');
+        console.log(currentPage);
+        if(currentPage != '/'+link+'.html')
+        {
+            window.location.href = link+'.html';
+        }
     }
 };
 
@@ -62,7 +90,7 @@ class carousel extends HTMLElement
 
         if(this.pointers == null)
         {
-            controls = gen.div("pointers");
+            this.pointers = gen.div("pointers");
         }
         var controls = gen.div("controls");
         controls.appendChild(gen.div("left"));
@@ -71,10 +99,10 @@ class carousel extends HTMLElement
 
 
 
-        this.appendChild(logo);
-        this.appendChild(search);
-        this.appendChild(build);
-        this.appendChild(user);
+        this.appendChild(controls);
+        // this.appendChild(search);
+        // this.appendChild(build);
+        // this.appendChild(user);
     }
     setChild(count)
     {
@@ -117,3 +145,5 @@ document.addEventListener("keyup", (e) => {
         searchText.focus();
         
 });
+
+unfocus()
