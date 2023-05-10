@@ -78,6 +78,35 @@ class MyMenu extends HTMLElement
     }
 };
 
+class partRow extends HTMLElement 
+{
+    constructor() 
+    {
+        var gen = new generator();
+        super();
+        this.classList.add("ItemRow");
+        var image = gen.div("itemImage");
+        var name = gen.div("itemName");
+        var price = gen.div("itemprice");
+        price.textContent = 'price'
+        var add = gen.div("add")
+        add.textContent = 'add'
+        price.appendChild(add)
+        var details = gen.div("details");
+        details.appendChild(gen.div("details1"))
+        details.appendChild(gen.div("details2"))
+        details.appendChild(gen.div("details3"))
+        details.appendChild(gen.div("details4"))
+        details.appendChild(gen.div("details5"))
+        details.appendChild(gen.div("details6"))
+
+        this.appendChild(image);
+        this.appendChild(name);
+        this.appendChild(price);
+        this.appendChild(details);
+    };
+}
+
 class carousel extends HTMLElement 
 {
     children = []
@@ -131,6 +160,7 @@ function focus()
 
 customElements.define('menu-bar', MyMenu);
 customElements.define('carousel-bar', carousel);
+customElements.define('part-row', partRow);
 const searchBar = document.querySelector('.Searchbar');
 const searchText = document.querySelector('.SearchText');
 const suggestionBox = document.querySelector('.suggestionbox');

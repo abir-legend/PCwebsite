@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 :root
 {
-    --hue:60;
+    --hue:90;
     --hue2:calc(var(--hue) + 2);
     --sat:60%;
     --sat2:50%;   
