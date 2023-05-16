@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Example</title>
+</head>
+<body>
+  <h1>Firebase Example</h1>
+
+  <!-- Add Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="js/fire.js" async defer></script>
+
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyDRh-6h2TwnXOyQGwKvnwTbdRZjJVHtRWk",
+      authDomain: "build-a-pc-b5507.firebaseapp.com",
+      databaseURL: "https://build-a-pc-b5507-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "build-a-pc-b5507",
+      storageBucket: "build-a-pc-b5507.appspot.com",
+      messagingSenderId: "337256431097",
+      appId: "1:337256431097:web:1906483d9551eb0e64d128",
+      measurementId: "G-601VYTVCZ2"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the database service
+    var database = firebase.database();
+
+    // Perform read and write operations on the database
+    // ...
+  </script>
+</body>
+</html>

@@ -3,7 +3,16 @@
     background-color: var(--Background_5);
     height: 200px;
 }
-
+input:focus {
+    outline: none;
+    border: 0;
+}
+input
+{
+    text-decoration: none;
+    color: var(--Background_5);
+    border: 0;
+}
 /* debug */
 body *
 {
@@ -11,6 +20,10 @@ body *
     /* color: var(--Forground_5); */
     /* outline: 1px solid #f00 !important; */
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--Background_5);
+    opacity: 1; /* Firefox */
+  }
 .AboutUs
 {
     height: 20vh;
