@@ -12,7 +12,7 @@ function searchValueInDatabase(searchValue) {
         generationSnapshot.forEach((modelSnapshot) => {
           const model = modelSnapshot.key; // Get the model key
           const data = modelSnapshot.val(); // Access the data
-          // console.log(model,data);
+          console.log(model,data);
 
           // Check if the searchValue exists anywhere in the data
           const isSearchValueFound = Object.values(data).some((value) =>
@@ -33,6 +33,26 @@ function searchValueInDatabase(searchValue) {
 }
 
 
+function getpartsbyType() {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const typeParam = urlSearchParams.get('parts');
+  
+  if (typeParam) {
+    const cpuDataRef = db.ref(typeParam.toLowerCase());
+    console.log(typeParam)
+
+    cpuDataRef.once('value', (snapshot) => {
+      const cpuData = snapshot.val();
+      if (cpuData) {
+        console.log(cpuData);
+      }
+    }).catch((error) => {
+      console.error('Error retrieving CPU data from Firebase:', error);
+    });
+  }
+}
+
+getpartsbyType()
   
   // Call the search function with the desired search value
-  searchValueInDatabase('13900');
+  // searchValueInDatabase('13900');

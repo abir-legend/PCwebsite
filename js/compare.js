@@ -16,6 +16,12 @@ function load(type = 'CPU', brand = '',generation='',model='')
     missingData(type+' not found')
   }
 }
+function setCompareStyle(x) {
+  const compareElement = document.querySelector('.compare');
+  if (compareElement) {
+    compareElement.style.gridTemplateColumns = `20vw repeat(${x}, 1.5fr)`;
+  }
+}
 
 load()
 load('type')

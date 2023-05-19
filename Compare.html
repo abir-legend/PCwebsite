@@ -25,8 +25,8 @@
         <!-- <script src="js/compare.js" type="module" async defer></script> -->
         <!-- <script src="js/jsonReader.js" async defer></script> -->
         
-        <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js" type="module"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js" type="module"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
         <script src="js/fire.js" async defer></script>
 
     </head>
@@ -42,36 +42,45 @@
                 <div class="label title">Name</div>
                 <div class="label Bnd">Brand</div>
                 <div class="label Gen">Generation</div>
-                <div class="label Det1">Details1</div>
-                <div class="label Det2">Details2</div>
-                <div class="label Det3">Details3</div>
-                <div class="label Det4">Details4</div>
-                <div class="label Det5">Details5</div>
-                <div class="label Det6">Details6</div>
+                <div class="label Det1">Core Count</div>
+                <div class="label Det2">Threads</div>
+                <div class="label Det3">Base Freq</div>
+                <div class="label Det4">Boost Freq</div>
+                <div class="label Det5">Process Node</div>
+                <div class="label Det6">TDP</div>
             </div>
             <div class="Item">
-                <div class="itemCol Prod">Prod</div>
+                <div class="itemCol Prod">Core i9 13900K</div>
                 <div class="itemCol Img">Img</div>
                 <input class="itemCol title" placeholder="Search">
-                <div class="itemCol Bnd">Bnd</div>
-                <div class="itemCol Gen">Gen</div>
-                <div class="itemCol Det1">Det1</div>
-                <div class="itemCol Det2">Det2</div>
-                <div class="itemCol Det3">Det3</div>
-                <div class="itemCol Det4">Det4</div>
-                <div class="itemCol Det5">Det5</div>
-                <div class="itemCol Det6">Det6</div>
+                <div class="itemCol Bnd">Intel</div>
+                <div class="itemCol Gen">13th Gen</div>
+                <div class="itemCol Det1">24</div>
+                <div class="itemCol Det2">32</div>
+                <div class="itemCol Det3">3.0 GHz</div>
+                <div class="itemCol Det4">5.4 GHz</div>
+                <div class="itemCol Det5">10nm</div>
+                <div class="itemCol Det6">125 W</div>
+            </div>
+           	
+            
+            <div class="Item">
+                <div class="itemCol Prod">Ryzen 9 7950X</div>
+                <div class="itemCol Img">Img</div>
+                <input class="itemCol title" placeholder="Search">
+                <div class="itemCol Bnd">AMD</div>
+                <div class="itemCol Gen">Ryzen 7000</div>
+                <div class="itemCol Det1">16</div>
+                <div class="itemCol Det2">32</div>
+                <div class="itemCol Det3">4.5 GHz</div>
+                <div class="itemCol Det4">5.7 GHz</div>
+                <div class="itemCol Det5">5nm</div>
+                <div class="itemCol Det6">170 W</div>
             </div>
         </div>
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
+        <script>
+            // Initialize Firebase
+            var firebaseConfig = {
               apiKey: "AIzaSyDRh-6h2TwnXOyQGwKvnwTbdRZjJVHtRWk",
               authDomain: "build-a-pc-b5507.firebaseapp.com",
               databaseURL: "https://build-a-pc-b5507-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -81,10 +90,13 @@
               appId: "1:337256431097:web:1906483d9551eb0e64d128",
               measurementId: "G-601VYTVCZ2"
             };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            window.app = app;
+            firebase.initializeApp(firebaseConfig);
+        
+            // Get a reference to the database service
+            var database = firebase.database();
+        
+            // Perform read and write operations on the database
+            // ...
           </script>
     </body>
 </html> 
