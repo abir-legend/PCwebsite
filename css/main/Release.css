@@ -3,56 +3,33 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: var(--Background_5);
-    width: 100%;
     height:30vh;
 }
-@media screen and (max-width: 500px)
-{
-    .NewReleases
-    {
-        grid-template-columns: repeat(2,1fr);
-        height:40vh;
-    }
-}
-.News
+
+.News,.Launch
 {
     background-color: var(--Background_5);
     position: relative;
-    height:100%
+    height:100%;
+    box-sizing: border-box;
+    background-clip:border-box ;
+}
+.News .h1,.Launch .h1
+{
+    position: absolute;
+    bottom: 20%;
+    left:2.5%
+}
+.News .article, .Launch .article
+{
+    position: absolute;
+    bottom: 10%;
+    left:2.5%
+}
 
-}
-.News .h1
-{
-    position: absolute;
-    bottom: 20%;
-    left:2.5%
-}
-.News .article
-{
-    position: absolute;
-    bottom: 10%;
-    left:2.5%
-}
-.Launch
-{
-    position: relative;
-    height:100%    
-}
-.Launch .h1
-{
-    position: absolute;
-    bottom: 20%;
-    left:2.5%
-}
-.Launch .article
-{
-    position: absolute;
-    bottom: 10%;
-    left:2.5%
-}
 .h1
 {
-    width:100%;
+    max-width: 90%;
     height:1em;
     white-space: nowrap;
 }
@@ -70,6 +47,7 @@
 {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .darkbg
 {
@@ -77,4 +55,24 @@
     height: 100%;
     width: 100%;
     background-image: linear-gradient(var(--rot),var(--c1) var(--pos1),var(--c2) var(--pos2));
+}
+@media screen and (max-width: 720px)
+{
+    .NewReleases
+    {
+        grid-template-columns: repeat(2,1fr);
+        height:40vh;
+    }
+    .News,.Launch
+    {
+        height:20vh;
+    }
+    .h1
+    {
+        font-size: .9em;
+    }
+    .News .h1,.Launch .h1
+    {
+        bottom: 20%;
+    }
 }

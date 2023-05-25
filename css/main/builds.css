@@ -1,0 +1,24 @@
+.budgetSegments
+{
+    background-color: var(--Forground_1);
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.mid
+{
+    background-color: var(--Background_5);
+    transform: skewX(-5deg);
+}
+.mid::before 
+{
+  left: 0;
+  transform: skewY(45deg);
+  transform-origin: top left;
+}
+.mid::after 
+{
+  right: 0;
+  
+  transform-origin: top right;
+}

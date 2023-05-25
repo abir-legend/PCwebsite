@@ -24,6 +24,10 @@
         <script src="js/build.js" async defer></script>
         <script src="js/storage.js" async defer></script>
         <script src="js/class.js" async defer></script>
+
+        
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     </head>
     <body>
         <menu-bar></menu-bar>
@@ -174,16 +178,9 @@
               </section>
           </main>
         <div class="AboutUs">About Us</div>
-        <script type="module">
-          // Import the functions you need from the SDKs you need
-          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-          import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-          // TODO: Add SDKs for Firebase products that you want to use
-          // https://firebase.google.com/docs/web/setup#available-libraries
-        
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-          const firebaseConfig = {
+        <script>
+          // Initialize Firebase
+          var firebaseConfig = {
             apiKey: "AIzaSyDRh-6h2TwnXOyQGwKvnwTbdRZjJVHtRWk",
             authDomain: "build-a-pc-b5507.firebaseapp.com",
             databaseURL: "https://build-a-pc-b5507-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -193,10 +190,13 @@
             appId: "1:337256431097:web:1906483d9551eb0e64d128",
             measurementId: "G-601VYTVCZ2"
           };
-        
-          // Initialize Firebase
-          const app = initializeApp(firebaseConfig);
-          const analytics = getAnalytics(app);
+          firebase.initializeApp(firebaseConfig);
+      
+          // Get a reference to the database service
+          var database = firebase.database();
+      
+          // Perform read and write operations on the database
+          // ...
         </script>
     </body>
 </html> 

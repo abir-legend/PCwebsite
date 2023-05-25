@@ -11,24 +11,30 @@
         <link rel="stylesheet" href="css/main/Carousel.css">
         <link rel="stylesheet" href="css/main/Svg.css">
         <link rel="stylesheet" href="css/main/Topics.css">
-        <link rel="stylesheet" href="css/main/Galary.css">
+        <link rel="stylesheet" href="css/main/compare.css">
+        <link rel="stylesheet" href="css/main/builds.css">
         <link rel="stylesheet" href="css/main/Release.css">
         <link rel="stylesheet" href="css/main/Community.css">
         <link rel="stylesheet" href="css/Style.css">
 
         <script src="https://kit.fontawesome.com/48b50220c6.js" crossorigin="anonymous"></script>
 
+        
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
         <script src="js/build.js" async defer></script>
         <script src="js/class.js" async defer></script>
-        <script src="js/comapre.js" async defer></script>
+        <script src="js/fire.js" async defer></script>
+        <script src="js/carousel.js" async defer></script>
+        <script src="js/popularcompare.js" async defer></script>
+        <script src="js/topic.js" async defer></script>
         <script src="js/storage.js" async defer></script>
     </head>
     <body>
         <menu-bar></menu-bar>
         <!-- <carousel-bar></carousel-bar> -->
             <div class="Carousel">
-                <div class="Car_Child"></div>
-                <div class="Car_Child_info">RTX 3090</div>
                 <div class="Car_left">
                     <i class="fa-solid fa-angle-left 2x"></i>
                 </div>
@@ -36,18 +42,17 @@
                     <i class="fa-solid fa-angle-right 5x"></i>
                 </div>
                 <div class="Car_dotsP">
-                <div class="Car_dots">
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-ring"></i>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle"></i>
+                    <div class="Car_dots">
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-ring"></i>
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="Topics">
-            <!-- <div class="TopicsW"> -->
-            <!-- <div class=""></div> -->
             <div class="cpu"><i class="fa-solid fa-microchip"></i></div>
             <div class="cooler"><i class="fa-solid fa-fan"></i></div>
             <div class="mobo"><i>mobo</i></div>
@@ -70,31 +75,14 @@
             <div class="TV"><i class="fa-solid fa-tv"></i></div>
             <!-- </div> -->
         </div>
-        <div class="Galary">
-            <div class="a cover">a</div>
-            <div class="b cover">b</div>
-            <div class="c cover">c</div>
-            <div class="d cover">d</div>
-            <div class="e cover">e</div>
-            <div class="f cover">f</div>
-            <div class="g cover">g</div>
-            <div class="h cover">h</div>
-            <div class="i cover">i</div>
-            <div class="j cover">j</div>
-            <div class="k cover">k</div>
-            <div class="l cover">l</div>
-            <div class="m cover">m</div>
-            <div class="n cover">n</div>
-            <div class="o cover">o</div>
-            <div class="p cover">p</div>
-            <div class="q cover">q</div>
-            <div class="r cover">r</div>
-            <div class="s cover">s</div>
-            <div class="t cover">t</div>
-            <div class="u cover">u</div>
-            <div class="v cover">v</div>
-            <div class="w cover">w</div>
-            <div class="x cover">x</div>
+        <div class="popularCompare">
+                compare
+
+        </div>
+        <div class="budgetSegments">
+            <div class="bud low" onclick="">b</div>
+            <div class="bud mid" onclick="">b</div>
+            <div class="bud high" onclick="">b</div>
         </div>
         <div class="NewReleases">
             <div class="News">
@@ -150,16 +138,9 @@
         </div>
         <div class="RecentlyViewed">No Recent View</div>
         <div class="AboutUs">About Us</div>
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-          
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
+        <script>
+            // Initialize Firebase
+            var firebaseConfig = {
               apiKey: "AIzaSyDRh-6h2TwnXOyQGwKvnwTbdRZjJVHtRWk",
               authDomain: "build-a-pc-b5507.firebaseapp.com",
               databaseURL: "https://build-a-pc-b5507-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -169,10 +150,13 @@
               appId: "1:337256431097:web:1906483d9551eb0e64d128",
               measurementId: "G-601VYTVCZ2"
             };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
+            firebase.initializeApp(firebaseConfig);
+        
+            // Get a reference to the database service
+            var database = firebase.database();
+        
+            // Perform read and write operations on the database
+            // ...
           </script>
     </body>
 </html> 
