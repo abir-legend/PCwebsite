@@ -28,6 +28,7 @@
         <script src="js/fire.js" async defer></script>
         <script src="js/carousel.js" async defer></script>
         <script src="js/popularcompare.js" async defer></script>
+        <script src="js/suggestBuild.js" async defer></script>
         <script src="js/topic.js" async defer></script>
         <script src="js/storage.js" async defer></script>
     </head>
@@ -80,9 +81,18 @@
 
         </div>
         <div class="budgetSegments">
-            <div class="bud low" onclick="">b</div>
-            <div class="bud mid" onclick="">b</div>
-            <div class="bud high" onclick="">b</div>
+            <div class="bud low" onclick="openBuildPage(build1)">
+                <div class="img"></div>
+                <div class="bval">₹30,000</div>
+            </div>
+            <div class="bud mid" onclick="openBuildPage(build2)">
+                <div class="img"></div>
+                <div class="bval">₹60,000</div>
+            </div>
+            <div class="bud high" onclick="openBuildPage(build3)">
+                <div class="img"></div>
+                <div class="bval">₹90,000</div>
+            </div>
         </div>
         <div class="NewReleases">
             <div class="News">
@@ -137,7 +147,22 @@
             </div>
         </div>
         <div class="RecentlyViewed">No Recent View</div>
-        <div class="AboutUs">About Us</div>
+        <div class="AboutUs">
+            <div class="titl">About Us</div>
+            <div class="descrip">PC Component Master is a user-friendly website developed as part of our final year project in college. Designed for PC enthusiasts, gamers, and DIY computer builders, our website serves as the ultimate guide for selecting, comparing, and understanding various PC components.</div>
+            <div class="aboutmore">
+                <div class="member">
+                    <div class="per proj">Project GitHub</div><i class="fa-brands fa-github"></i><div></div>
+                    <div class="per">Abir Dutta</div><i class="fa-brands fa-github"></i><i class="fa-brands fa-linkedin"></i>
+                    <div class="per">Hritick Biswas</div><i class="fa-brands fa-github"></i><i class="fa-brands fa-linkedin"></i>
+                    <div class="per">Sourav Das</div><i class="fa-brands fa-github"></i><i class="fa-brands fa-linkedin"></i>
+                    <div class="per">Subham Pal</div><i class="fa-brands fa-github"></i><i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="contri">
+                    <canvas id="contributors-graph"></canvas>
+                </div>
+            </div>
+        </div>
         <script>
             // Initialize Firebase
             var firebaseConfig = {

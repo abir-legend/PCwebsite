@@ -19,14 +19,38 @@ body *
     /* background-color: var(--Background_5); */
     /* color: var(--Forground_5); */
     /* outline: 1px solid #f00 !important; */
-}
+} 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--Background_5);
     opacity: 1; /* Firefox */
   }
 .AboutUs
 {
-    height: 20vh;
+    height: 40vh;
     bottom: 0;
     width: 100%;
+    display: grid;
+}
+.aboutmore
+{
+    display: grid;
+    padding-left: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.member
+{
+    display: grid;
+    grid-template-columns: 120px 30px 30px;
+    column-gap: 10px;
+}
+.member i
+{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 25px;
+}
+.contri
+{
+    padding-left: 10;
 }
