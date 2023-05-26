@@ -253,16 +253,6 @@ function getUrlSearchParams() {
 const params = getUrlSearchParams();
 getdataparams(params);
 
-function getdataparams(data) {
-  // type=data['type'];
-  const parts = Object.keys(data).filter(type => type !== 'type');
-  console.log(parts);
-  for(const pdata in parts) {
-    console.log(pdata);
-    console.log(data[parts[pdata]]);
-  }
-  console.log(data['type']);
-}
 
 // ['boost_clock',
 //   'core_clock',
@@ -274,10 +264,25 @@ function getdataparams(data) {
 //   'smt',
 //   'tdp']
 
+
+
+// Example usage
+function getdataparams(data) {
+  // type=data['type'];
+  const parts = Object.keys(data).filter(type => type !== 'type');
+  console.log(parts);
+  for(const pdata in parts) {
+    console.log(pdata);
+    console.log(data[parts[pdata]]);
+  }
+  console.log(data['type']);
+}
+function getdatatype(data) {
+  // type=data['type'];
   
-  
-  // Example usage
-  var labelsList = ['boost_clock', 'core_clock', 'core_count', 'image', 'integrated_graphics', 'name', 'price', 'smt', 'tdp'];
+  return data['type'];
+}
+  // var labelsList = ['boost_clock', 'core_clock', 'core_count', 'image', 'integrated_graphics', 'name', 'price', 'smt', 'tdp'];
 
   function updateLabels(values) {
     const labels = document.querySelectorAll('.label > div');
@@ -291,4 +296,8 @@ function getdataparams(data) {
     }
   }
 
-  updateLabels(labelsList);
+  
+  getLabel(getdatatype(),function(params) {
+    updateLabels(params);
+  console.log(params)
+})
