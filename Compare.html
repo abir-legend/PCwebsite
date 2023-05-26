@@ -22,7 +22,7 @@
         <!-- <script src="js/App.js" async defer></script> -->
         <script src="js/build.js" async defer></script>
         <script src="js/class.js" async defer></script>
-        <!-- <script src="js/compare.js" type="module" async defer></script> -->
+        <script src="js/compare.js" type="module" async defer></script>
         <!-- <script src="js/jsonReader.js" async defer></script> -->
         
         <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -32,7 +32,8 @@
 
     </head>
     <body>
-        <menu-bar></menu-bar>       
+        <menu-bar></menu-bar> 
+        <my-compare></my-compare>      
         <div class="pageTitle">
                Parts Detailed Comparison
         </div>
@@ -98,6 +99,57 @@
         
             // Perform read and write operations on the database
             // ...
+           // Function to fetch CPU data from Firebase and populate the compare page
+           
+// function populateComparePage() {
+//   // Get a reference to the CPU data in the Firebase database
+//   const cpuRef = database.ref('/cpu');
+
+//   // Retrieve the CPU data once
+//   cpuRef.once('value', (snapshot) => {
+//     // Get the CPU data object
+//     const cpuData = snapshot.val();
+
+//     // Get the compare div element
+//     const compareElement = document.querySelector('.compare');
+
+//     // Loop through each CPU entry
+//     snapshot.forEach((cpuSnapshot) => {
+//       // Create a new Item element for each CPU entry
+//       const itemElement = document.createElement('div');
+//       itemElement.classList.add('Item');
+
+//       // Get the CPU details
+//       const cpuDetails = cpuSnapshot.val();
+
+//       // Iterate over each property of the CPU details
+//       for (const property in cpuDetails) {
+//         if (cpuDetails.hasOwnProperty(property)) {
+//           // Create a new itemCol element for each property
+//           const itemColElement = document.createElement('div');
+//           itemColElement.classList.add('itemCol');
+//           itemColElement.classList.add(property);
+
+//           // Set the text content of the itemCol element with the corresponding CPU detail value
+//           itemColElement.textContent = cpuDetails[property];
+
+//           // Append the itemCol element to the itemElement
+//           itemElement.appendChild(itemColElement);
+//         }
+//       }
+
+//       // Append the Item element to the compare div
+//       compareElement.appendChild(itemElement);
+//     });
+//   }).catch((error) => {
+//     console.error('Error retrieving CPU data:', error);
+//   });
+// }
+
+// // Call the function to populate the compare page with CPU data
+// populateComparePage();
+
+
           </script>
     </body>
 </html> 
