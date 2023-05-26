@@ -33,26 +33,74 @@ function searchValueInDatabase(searchValue) {
 }
 
 
-function getpartsbyType() {
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  const typeParam = urlSearchParams.get('parts');
-  
-  if (typeParam) {
-    const cpuDataRef = db.ref(typeParam.toLowerCase());
-    console.log(typeParam)
-
-    cpuDataRef.once('value', (snapshot) => {
-      const cpuData = snapshot.val();
-      if (cpuData) {
-        console.log(cpuData);
-      }
-    }).catch((error) => {
-      console.error('Error retrieving CPU data from Firebase:', error);
+function getpartsbyName(type,name,callback) {
+  db.ref(type).orderByChild('name').equalTo(name).once('value')
+    .then(function(snapshot) {
+      // Iterate over the query results
+      snapshot.forEach(function(childSnapshot) {
+        let key = childSnapshot.key;
+        var value = childSnapshot.val();
+        console.log(value);
+        callback(value);
+      });
+    })
+    .catch(function(error) {
+      console.error('Error:', error);
     });
-  }
 }
 
-getpartsbyType()
+// 
+//  usage
+//  getpartsbyName('cpu', 'searchTerm', function(results) { console.log(results);});
+// 
+
+
+function getImage(type, name, callback) {
+  db.ref(type)
+    .orderByChild('name')
+    .equalTo(name)
+    .once('value')
+    .then(function(snapshot) {
+      let image = '';
+      snapshot.forEach(function(childSnapshot) {
+        const value = childSnapshot.val();
+        image = value['image'];
+      });
+      callback(image);
+    })
+    .catch(function(error) {
+      console.error('Error:', error);
+      callback("https://media.istockphoto.com/id/1204740322/photo/cpu.jpg?s=612x612&w=0&k=20&c=DSjrMlrtuD42yC5XHtpoc2mqGEYEjk-B-JTDK4McTK8=");
+    });
+}
+
+function getLabel(type,callback) {
+  db.ref(type)
+    .once('value')
+    .then((snapshot) => {
+      const data = snapshot.val();
+      const firstDataKey = Object.keys(data)[0];
+      console.log(data);
+      db.ref(type)
+        .child(firstDataKey)
+        .once('value')
+        .then((snapshot) => {
+          const randomData = snapshot.val();
+          const randomDataKeys = Object.keys(randomData);
+          console.log(randomData, randomDataKeys);
+          callback(randomDataKeys);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+
+// getLabel('cpu',function(params) {
+//   console.log(params)
+// })
   
-  // Call the search function with the desired search value
-  // searchValueInDatabase('13900');
