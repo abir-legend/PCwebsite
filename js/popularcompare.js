@@ -30,8 +30,10 @@ compareRef.on('value', function(snapshot) {
                     partsDiv.appendChild(partDiv);
                     const numParts = Object.keys(compareData[type]).length;
                     partsDiv.style.gridTemplateColumns = `repeat(${numParts}, 1fr)`;
-                    const imageUrl = getImage(type, compareData[type][part]);
-                    partDiv.style.backgroundImage = `url(${imageUrl})`;
+                    getImage('cpu', 'searchTerm', function(image) {
+                        const imageUrl = image
+                        partDiv.style.backgroundImage = `url(${imageUrl})`;
+                      });     
         }
       }
 
@@ -65,7 +67,3 @@ function Slide(ind) {
 }
 setInterval(nextCompare, 7000);
 
-function getImage(type, id)
-{
-    return "https://media.istockphoto.com/id/1204740322/photo/cpu.jpg?s=612x612&w=0&k=20&c=DSjrMlrtuD42yC5XHtpoc2mqGEYEjk-B-JTDK4McTK8="
-}
