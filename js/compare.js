@@ -30,7 +30,7 @@ function getdatatype(data) {
   function updateLabels(values) {
     const labels = document.querySelectorAll('.label > div');
     const modifiedList = values.filter(label => label !== 'name' && label !== 'image');
-    const constlist = ['name', 'image'];
+    const constlist = ['Name', 'Image'];
     const joinedList = constlist.concat(modifiedList);
 
     for (let i = 0; i < values.length; i++) {
