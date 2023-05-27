@@ -1,4 +1,3 @@
 ## PcComponentMaster 
 
-PcComponentMaster provides computer part selection, compatibility, and pricing guidance(exclusively in Indian Rupee system) for do-it-yourself computer builders. Assemble your virtual part lists with PcComponentMaster and we'll provide compatibility guidance with up-to-date pricing from dozens of the most popular online retailers. We make it easy to share your part list with others, and our community forums provide a great place to discuss ideas and solicit feedback. 
- 
+PcComponentMaster provides computer part selection, compatibility, and pricing guidance(exclusively in Indian Rupee system) for do-it-yourself computer builders. Assemble your virtual part lists with PcComponentMaster and we'll provide compatibility guidance with up-to-date pricing from dozens of the most popular online retailers. We make it easy to share your part list with others, and our community forums provide a great place to discuss ideas and solicit feedback. This website can serve as an educational platform, providing resources, guides, and tutorials on PC building, helping users learn about different components and their compatibility.
