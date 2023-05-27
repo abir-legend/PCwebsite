@@ -17,17 +17,19 @@ const params = getUrlSearchParams();
 console.log(params);
 
 Object.keys(params).forEach(element => {
-    getpartsbyName(element, params[element], function(results) { console.log(results);});
-
-});
-
-<<<<<<< HEAD
-
-=======
-function getpartsbyName(type,name,callback) {
+    getpartsbyName(element, params[element], function(results) { console.log(results,'hi');});
+  });
+  
+  
+  function getpartsbyName(type,name,callback) {
+    if(name === 'AMD Ryzen 5 3600')
+    {
+      console.log('okay');
+    }
     db.ref(type).orderByChild('name').equalTo(name).once('value')
-      .then(function(snapshot) {
+    .then(function(snapshot) {
         // Iterate over the query results
+        console.log(type,name,snapshot.val(),name);
         snapshot.forEach(function(childSnapshot) {
           let key = childSnapshot.key;
           var value = childSnapshot.val();
@@ -39,4 +41,11 @@ function getpartsbyName(type,name,callback) {
         console.error('Error:', error);
       });
   }
->>>>>>> 1fde1727fc7825230f5dabf0379ef843d7a716af
+
+getpartsbyName('cpu', 'AMD Ryzen 5 3600', function(results) { console.log(results,'hi');});
+
+  function setData(obj,text)
+  {
+    obj.innerHtml = ''
+    obj.textContent = text
+  }

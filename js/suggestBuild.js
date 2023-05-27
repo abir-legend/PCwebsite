@@ -8,33 +8,33 @@ function openBuildPage(parameters) {
   }
 
   const build1 = {
-    "CPU": "AMD Ryzen 3 3100",
-    "CPU Cooler": "Stock Cooler",
-    'Motherboard': "Gigabyte B450M DS3H",
-    "Memory": "Corsair Vengeance LPX 8GB DDR4",
-    "Storage": "Crucial MX500 240GB SSD",
-    "Video Card": "NVIDIA GTX 1650",
+    "cpu": "AMD Ryzen 3 3100",
+    "Cooler": "Stock Cooler",
+    'motherboard': "Gigabyte B450M DS3H",
+    "ram": "Corsair Vengeance LPX 8GB DDR4",
+    "storage": "Crucial MX500 240GB SSD",
+    "gpu": "NVIDIA GTX 1650",
     "Case": "Antec VSK10",
-    "Power Supply": "Corsair CX450"
+    "psu": "Corsair CX450"
   };
   const build2 = {
-    "CPU": "AMD Ryzen 5 3600",
-    "CPU Cooler": "Cooler Master Hyper 212",
-    "Motherboard": "MSI B450 TOMAHAWK MAX",
-    "Memory": "Corsair Vengeance LPX 16GB DDR4",
-    "Storage": "Samsung 970 EVO 500GB NVMe SSD",
-    "Video Card": "NVIDIA GTX 1660 Super",
+    "cpu": "AMD Ryzen 5 3600",
+    "Cooler": "Cooler Master Hyper 212",
+    "motherboard": "MSI B450 TOMAHAWK MAX",
+    "ram": "Corsair Vengeance LPX 16GB DDR4",
+    "storage": "Samsung 970 EVO 500GB NVMe SSD",
+    "gpu": "NVIDIA GTX 1660 Super",
     "Case": "NZXT H510",
-    "Power Supply": "Corsair CX550M"
+    "psu": "Corsair CX550M"
   };
   const build3 = {
-    "CPU": "AMD Ryzen 7 5800X",
-    "CPU Cooler": "Noctua NH-D15",
-    "Motherboard": "ASUS ROG Strix B550-F Gaming",
-    "Memory": "Corsair Vengeance RGB Pro 16GB DDR4",
-    "Storage": "Samsung 970 EVO Plus 1TB NVMe SSD",
-    "Video Card": "NVIDIA RTX 3060 Ti",
+    "cpu": "AMD Ryzen 7 5800X",
+    "Cooler": "Noctua NH-D15",
+    "motherboard": "ASUS ROG Strix B550-F Gaming",
+    "ram": "Corsair Vengeance RGB Pro 16GB DDR4",
+    "storage": "Samsung 970 EVO Plus 1TB NVMe SSD",
+    "gpu": "NVIDIA RTX 3060 Ti",
     "Case": "Phanteks Eclipse P400A",
-    "Power Supply": "Corsair RM750"
+    "psu": "Corsair RM750"
   };
   
