@@ -30,7 +30,8 @@ compareRef.on('value', function(snapshot) {
                     partsDiv.appendChild(partDiv);
                     const numParts = Object.keys(compareData[type]).length;
                     partsDiv.style.gridTemplateColumns = `repeat(${numParts}, 1fr)`;
-                    getImage('cpu', 'searchTerm', function(image) {
+                    console.log(type,compareData[type][part]);
+                    getImage(type, compareData[type][part], function(image) {
                         const imageUrl = image
                         partDiv.style.backgroundImage = `url(${imageUrl})`;
                       });     
@@ -56,6 +57,10 @@ function nextCompare() {
 }
 
 function Slide(ind) {
+    if(ind == NaN)
+    {
+        ind = 0
+    }
     console.log(ind);
     comps.forEach((par, i) => {
         if (i === ind) {

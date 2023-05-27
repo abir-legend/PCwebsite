@@ -61,10 +61,12 @@ function getImage(type, name, callback) {
     .equalTo(name)
     .once('value')
     .then(function(snapshot) {
+      console.log(snapshot.val());
       let image = '';
       snapshot.forEach(function(childSnapshot) {
         const value = childSnapshot.val();
         image = value['image'];
+        console.log(type,name,image);
       });
       callback(image);
     })
