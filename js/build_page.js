@@ -18,3 +18,5 @@ params.keys().forEach(element => {
     getpartsbyName(element, params[element], function(results) { console.log(results);});
 
 });
+
+
