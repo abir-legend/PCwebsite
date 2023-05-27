@@ -17,19 +17,18 @@ const params = getUrlSearchParams();
 console.log(params);
 
 Object.keys(params).forEach(element => {
-    getpartsbyName(element, params[element], function(results) { console.log(results,'hi');});
+    getpartsbyName(element, params[element], function(results) { console.log(results);});
   });
   
   
   function getpartsbyName(type,name,callback) {
-    if(name === 'AMD Ryzen 5 3600')
-    {
-      console.log('okay');
-    }
     db.ref(type).orderByChild('name').equalTo(name).once('value')
     .then(function(snapshot) {
         // Iterate over the query results
-        console.log(type,name,snapshot.val(),name);
+        if(snapshot.val() == null)
+        {
+          console.log(type,name);
+        }
         snapshot.forEach(function(childSnapshot) {
           let key = childSnapshot.key;
           var value = childSnapshot.val();
@@ -41,8 +40,6 @@ Object.keys(params).forEach(element => {
         console.error('Error:', error);
       });
   }
-
-getpartsbyName('cpu', 'AMD Ryzen 5 3600', function(results) { console.log(results,'hi');});
 
   function setData(obj,text)
   {
